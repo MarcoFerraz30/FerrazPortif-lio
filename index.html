@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Marco Antonio Ferraz | Portfólio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="pular-conteudo" href="#sobre">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <h1>MARCO ANTONIO FERRAZ</h1>
+
+    <button
+      id="botao-tema"
+      class="botao-tema"
+      type="button"
+      aria-pressed="false"
+    >
+      Ativar modo escuro
+    </button>
+
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#sobre">SOBRE MIM</a>
+      <a href="#projetos">PROJETOS</a>
+      <a href="#contato">CONTATO</a>
+      <a href="curriculo.pdf" download>MEU CURRÍCULO</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section id="sobre" class="secao sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">SOBRE MIM</h2>
+
+      <div class="sobre-conteudo">
+        <p class="biografia">
+          GThere are many variations of passages of Lorem Ipsum available,
+          but the majority have suffered adon't look even slightly believable.
+          If you are going to use a passage of Lorem Ipsum, you need to be sure
+          there isn't anything embarrassing hidden in the middle of text.
+          All the Lorem Ipsum generators on the Internet tend to repeat
+          predefined chunks as necessary, maki
+        </p>
+
+        <!-- Substitua este espaço por uma imagem:
+        <img class="foto" src="foto.jpg" alt="Marco Antonio Ferraz">
+        -->
+        <div class="foto-reservada" role="img" aria-label="Espaço para sua foto">
+          <span aria-hidden="true">▧</span>
+          <span>Sua foto aqui</span>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="projetos"
+      class="secao projetos"
+      aria-labelledby="titulo-projetos"
+    >
+      <h2 id="titulo-projetos">MEUS PROJETOS</h2>
+
+      <div class="grade-projetos">
+        <!-- Troque os espaços abaixo pelas imagens dos seus projetos. -->
+        <article class="projeto" aria-label="Espaço para o projeto 1">
+          <div class="imagem-projeto">Projeto 1</div>
+        </article>
+
+        <article class="projeto" aria-label="Espaço para o projeto 2">
+          <div class="imagem-projeto">Projeto 2</div>
+        </article>
+
+        <article class="projeto" aria-label="Espaço para o projeto 3">
+          <div class="imagem-projeto">Projeto 3</div>
+        </article>
+
+        <article class="projeto" aria-label="Espaço para o projeto 4">
+          <div class="imagem-projeto">Projeto 4</div>
+        </article>
+
+        <button
+          id="ver-todos"
+          class="ver-todos"
+          type="button"
+          aria-expanded="false"
+          aria-controls="lista-projetos"
+        >
+          VER TODOS <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div id="lista-projetos" class="lista-projetos" hidden>
+        <h3>Lista de projetos</h3>
+        <p>Substitua os nomes abaixo pelos seus projetos reais.</p>
+        <ul>
+          <li>Projeto 1</li>
+          <li>Projeto 2</li>
+          <li>Projeto 3</li>
+          <li>Projeto 4</li>
+        </ul>
+      </div>
+    </section>
+
+    <section
+      id="contato"
+      class="secao contato"
+      aria-labelledby="titulo-contato"
+    >
+      <h2 id="titulo-contato">CONTATO</h2>
+
+      <form id="formulario-contato">
+        <div class="campos-linha">
+          <div class="campo">
+            <label for="nome">NOME:</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              autocomplete="name"
+              placeholder="Seu nome"
+              maxlength="100"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="email">EMAIL:</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="seu@email.com"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="campo campo-mensagem">
+          <label for="mensagem">MENSAGEM:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="8"
+            placeholder="Escreva sua mensagem..."
+            maxlength="5000"
+            required
+          ></textarea>
+        </div>
+
+        <p class="aviso-formulario">
+          Demonstração: este formulário ainda não envia mensagens.
+        </p>
+
+        <button class="botao-enviar" type="submit">VALIDAR MENSAGEM</button>
+
+        <p id="retorno-formulario" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="ano"></span> Marco Antonio Ferraz</p>
+  </footer>
+</body>
+</html>
